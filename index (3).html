@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Restaurant | Where Executive Taste Meets Timeless Elegance</title>
+<meta name="description" content="Executive Restaurant — A premier fine-dining destination for professionals, executives, and private events. Reserve your table today.">
+<link rel="canonical" href="https://executiverestaurant.com">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Executive Restaurant","url":"https://executiverestaurant.com","telephone":"+1-555-393-2346","address":{"@type":"PostalAddress","streetAddress":"1 Executive Plaza","addressLocality":"New York","addressRegion":"NY","postalCode":"10001","addressCountry":"US"},"servesCuisine":"Contemporary American","priceRange":"$$$$","openingHours":["Mo-Fr 11:30-23:00","Sa-Su 17:00-24:00"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Tenor+Sans&family=Lato:wght@100;200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#06050a;
+  --deep:#0d0c12;
+  --surface:#13121a;
+  --panel:#1a1824;
+  --gold:#c8a96e;
+  --gold2:#e8c98a;
+  --gold3:#f5e6c0;
+  --gold-glow:rgba(200,169,110,0.18);
+  --gold-dim:rgba(200,169,110,0.08);
+  --ivory:#f7f3eb;
+  --ivory2:rgba(247,243,235,0.85);
+  --muted:rgba(247,243,235,0.45);
+  --muted2:rgba(247,243,235,0.25);
+  --border:rgba(200,169,110,0.15);
+  --border2:rgba(247,243,235,0.07);
+  --ff-title:'Playfair Display',serif;
+  --ff-sub:'Tenor Sans',serif;
+  --ff-body:'Lato',sans-serif;
+  --ease:cubic-bezier(0.19,1,0.22,1);
+  --ease2:cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{background:var(--ink);color:var(--ivory);font-family:var(--ff-body);font-weight:300;line-height:1.75;overflow-x:hidden;cursor:none}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,var(--gold),transparent)}
+
+/* CURSOR */
+#cursor{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(200,169,110,0.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+
+/* NOISE */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.028;pointer-events:none;z-index:9998}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--ink);z-index:9997;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transition:opacity .8s var(--ease),visibility .8s}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.loader-logo{font-family:var(--ff-title);font-size:2.5rem;color:var(--gold);letter-spacing:.1em;animation:lPulse 1.5s ease-in-out infinite}
+@keyframes lPulse{0%,100%{opacity:.4}50%{opacity:1}}
+.loader-bar-wrap{width:200px;height:1px;background:var(--border)}
+.loader-bar{height:100%;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2));animation:lFill 2s var(--ease) forwards}
+@keyframes lFill{from{width:0}to{width:100%}}
+.loader-text{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);animation:lPulse 1.5s .3s ease-in-out infinite}
+
+/* TYPOGRAPHY */
+h1,h2,h3{font-family:var(--ff-title);font-weight:400;line-height:1.08}
+.eyebrow{font-family:var(--ff-body);font-size:.6rem;font-weight:400;letter-spacing:.45em;text-transform:uppercase;color:var(--gold)}
+.big-title{font-size:clamp(3rem,6.5vw,6.2rem);color:var(--ivory)}
+.big-title em{font-style:italic;color:var(--gold2)}
+.body-text{font-size:.9rem;color:var(--muted);line-height:1.95;font-weight:300}
+
+/* ORNAMENT */
+.ornament{display:flex;align-items:center;gap:1rem;margin:1.2rem 0 1.8rem}
+.ornament::before,.ornament::after{content:'';flex:1;max-width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.ornament-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.8rem;padding:.95rem 2.2rem;font-family:var(--ff-body);font-size:.62rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;cursor:none;border:none;position:relative;overflow:hidden;transition:color .4s}
+.btn-inner{position:relative;z-index:2;display:flex;align-items:center;gap:.8rem}
+.btn-bg{position:absolute;inset:0;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.btn:hover .btn-bg{transform:scaleX(1)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold .btn-bg{background:var(--gold2)}
+.btn-ghost{background:transparent;color:var(--ivory);border:1px solid rgba(247,243,235,0.2)}
+.btn-ghost .btn-bg{background:rgba(247,243,235,0.06)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-arrow{transition:transform .3s;display:inline-block}
+.btn:hover .btn-arrow{transform:translateX(5px)}
+
+/* ======================================
+   HEADER — PREMIUM REBUILD
+====================================== */
+#site-header{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  height:90px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3.5vw;
+  transition:height .5s var(--ease);
+}
+/* Frosted glass layer */
+#site-header::before{
+  content:'';position:absolute;inset:0;
+  background:rgba(6,5,10,0.0);
+  backdrop-filter:blur(0px);
+  -webkit-backdrop-filter:blur(0px);
+  border-bottom:1px solid transparent;
+  transition:background .5s,backdrop-filter .5s,-webkit-backdrop-filter .5s,border-color .5s;
+}
+#site-header.scrolled::before{
+  background:rgba(6,5,10,0.94);
+  backdrop-filter:blur(28px) saturate(1.5);
+  -webkit-backdrop-filter:blur(28px) saturate(1.5);
+  border-color:var(--border);
+}
+#site-header.scrolled{height:68px}
+
+/* Gold accent top line - hidden initially, shown on scroll */
+.header-topline{
+  position:absolute;top:0;left:0;right:0;height:2px;z-index:2;
+  background:linear-gradient(90deg,transparent 0%,var(--gold) 20%,var(--gold2) 50%,var(--gold) 80%,transparent 100%);
+  transform:scaleX(0);transition:transform .6s .1s var(--ease);
+}
+#site-header.scrolled .header-topline{transform:scaleX(1)}
+
+/* LOGO */
+.header-logo{position:relative;z-index:2;text-decoration:none;display:flex;flex-direction:column;gap:.2rem}
+.logo-word{font-family:var(--ff-title);font-size:1.6rem;font-weight:500;color:var(--ivory);letter-spacing:.04em;line-height:1;transition:color .3s;display:flex;align-items:center;gap:.3rem}
+.logo-word .dot{color:var(--gold);font-size:1.8rem;line-height:.8;transition:color .3s}
+.logo-sub-row{display:flex;align-items:center;gap:.6rem}
+.logo-rule{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);max-width:30px}
+.logo-tagline{font-family:var(--ff-body);font-size:.48rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);opacity:.8}
+
+/* CENTER NAV */
+.header-nav{
+  position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:0;
+  z-index:2;
+}
+.header-nav a{
+  font-family:var(--ff-body);font-size:.58rem;font-weight:400;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(247,243,235,0.55);text-decoration:none;
+  position:relative;padding:.5rem 1.3rem;
+  transition:color .3s;
+}
+.header-nav a::after{
+  content:'';position:absolute;bottom:.2rem;left:1.3rem;right:1.3rem;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transition:transform .35s var(--ease);
+}
+.header-nav a:hover{color:var(--gold)}
+.header-nav a:hover::after{transform:scaleX(1)}
+.nav-gem{width:3px;height:3px;background:rgba(200,169,110,.3);transform:rotate(45deg);flex-shrink:0}
+
+/* RIGHT ACTIONS */
+.header-right{position:relative;z-index:2;display:flex;align-items:center;gap:1.8rem}
+.hdr-tel{font-family:var(--ff-body);font-size:.58rem;letter-spacing:.12em;color:var(--muted);text-decoration:none;transition:color .3s}
+.hdr-tel:hover{color:var(--gold)}
+
+.hdr-reserve{
+  display:flex;align-items:center;gap:.65rem;
+  padding:.65rem 1.6rem;
+  font-family:var(--ff-body);font-size:.58rem;font-weight:400;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;cursor:none;
+  border:1px solid rgba(200,169,110,.45);
+  position:relative;overflow:hidden;transition:color .4s;
+}
+.hdr-reserve::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.hdr-reserve:hover::before{transform:scaleX(1)}
+.hdr-reserve:hover{color:var(--ink)}
+.hdr-reserve span{position:relative;z-index:1}
+.hdr-reserve-gem{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;position:relative;z-index:1;transition:background .4s}
+.hdr-reserve:hover .hdr-reserve-gem{background:var(--ink)}
+
+/* HAMBURGER */
+.hdr-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:6px;position:relative;z-index:2}
+.hdr-ham i{display:block;height:1px;background:var(--ivory);transition:all .4s var(--ease);transform-origin:center}
+.hdr-ham i:nth-child(1){width:28px}
+.hdr-ham i:nth-child(2){width:18px;margin-left:10px}
+.hdr-ham i:nth-child(3){width:24px}
+.hdr-ham.open i:nth-child(1){width:24px;transform:translateY(6px) rotate(45deg)}
+.hdr-ham.open i:nth-child(2){opacity:0;transform:scaleX(0)}
+.hdr-ham.open i:nth-child(3){width:24px;transform:translateY(-6px) rotate(-45deg)}
+
+/* MOBILE OVERLAY */
+.mob-overlay{
+  position:fixed;inset:0;z-index:990;
+  background:var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+  opacity:0;visibility:hidden;
+  transition:opacity .5s var(--ease),visibility .5s;
+}
+.mob-overlay.open{opacity:1;visibility:visible}
+.mob-overlay a{
+  font-family:var(--ff-title);font-size:clamp(1.8rem,5vw,2.8rem);
+  color:var(--ivory);text-decoration:none;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .4s,transform .4s var(--ease),color .3s;
+}
+.mob-overlay.open a{opacity:1;transform:translateY(0)}
+.mob-overlay.open a:nth-child(1){transition-delay:.08s}
+.mob-overlay.open a:nth-child(2){transition-delay:.14s}
+.mob-overlay.open a:nth-child(3){transition-delay:.2s}
+.mob-overlay.open a:nth-child(4){transition-delay:.26s}
+.mob-overlay.open a:nth-child(5){transition-delay:.32s}
+.mob-overlay.open a:nth-child(6){transition-delay:.38s}
+.mob-overlay a:hover{color:var(--gold)}
+
+/* ======================================
+   HERO
+====================================== */
+#hero{position:relative;height:100vh;min-height:750px;overflow:hidden;display:flex;align-items:center}
+
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 2s ease}
+.hero-slide.active{opacity:1;animation:kBurns 12s ease-out forwards}
+@keyframes kBurns{from{transform:scale(1.06)}to{transform:scale(1)}}
+.slide-1{background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85')}
+.slide-2{background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=85')}
+.slide-3{background-image:url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1920&q=85')}
+
+.hero-vignette{
+  position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse at center,transparent 25%,rgba(6,5,10,.55) 100%),
+    linear-gradient(105deg,rgba(6,5,10,.82) 0%,rgba(6,5,10,.25) 55%,transparent 100%),
+    linear-gradient(to top,rgba(6,5,10,.65) 0%,transparent 45%);
+}
+.hero-shimmer{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 50% 35% at 18% 50%,rgba(200,169,110,.05) 0%,transparent 70%);
+  animation:shimPulse 5s ease-in-out infinite;
+}
+@keyframes shimPulse{0%,100%{opacity:.5}50%{opacity:1}}
+
+.hero-content{position:relative;z-index:3;padding:0 6vw;max-width:900px}
+
+.hero-eyebrow{
+  display:flex;align-items:center;gap:1.2rem;margin-bottom:2.5rem;
+  opacity:0;transform:translateY(20px);animation:fUp .9s .8s var(--ease) forwards;
+}
+.hero-ey-line{width:50px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+.hero-title{font-size:clamp(3.2rem,7.5vw,7.8rem);font-weight:400;line-height:1.0;color:var(--ivory);margin-bottom:1.8rem}
+.ht1{display:block;opacity:0;transform:translateY(40px);animation:fUp 1s .95s var(--ease) forwards}
+.ht2{display:block;font-style:italic;color:var(--gold2);opacity:0;transform:translateY(40px);animation:fUp 1s 1.1s var(--ease) forwards}
+.ht3{display:block;opacity:0;transform:translateY(40px);animation:fUp 1s 1.25s var(--ease) forwards}
+
+.hero-divider{
+  display:flex;align-items:center;gap:1.2rem;margin-bottom:1.8rem;
+  opacity:0;animation:fIn .8s 1.5s ease forwards;
+}
+.hd-line{flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hd-text{font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+
+.hero-sub{
+  font-size:1rem;color:rgba(247,243,235,.6);max-width:460px;line-height:2;
+  margin-bottom:3.5rem;font-weight:300;
+  opacity:0;transform:translateY(20px);animation:fUp .9s 1.6s var(--ease) forwards;
+}
+.hero-actions{
+  display:flex;gap:1.2rem;flex-wrap:wrap;
+  opacity:0;transform:translateY(20px);animation:fUp .9s 1.8s var(--ease) forwards;
+}
+
+.hero-scroll{
+  position:absolute;bottom:3rem;right:5vw;z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:.7rem;
+  opacity:0;animation:fIn 1s 2.5s ease forwards;
+}
+.hero-scroll-txt{font-size:.5rem;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-lr}
+.hero-scroll-ln{width:1px;height:60px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPls 2.2s ease-in-out infinite}
+@keyframes scrollPls{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(0);transform-origin:bottom}}
+
+.hero-dots{
+  position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);
+  display:flex;gap:.8rem;z-index:3;
+  opacity:0;animation:fIn 1s 2.5s ease forwards;
+}
+.hero-dot{width:28px;height:2px;background:rgba(247,243,235,.25);cursor:none;transition:all .3s;border:none;padding:0}
+.hero-dot.active{background:var(--gold);width:44px}
+
+@keyframes fUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fIn{from{opacity:0}to{opacity:1}}
+
+/* ======================================
+   AWARDS STRIP
+====================================== */
+.awards-strip{
+  background:var(--surface);
+  border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);
+  padding:2rem 5vw;
+  display:flex;align-items:center;justify-content:center;gap:4rem;overflow:hidden;
+}
+.award-item{display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(15px);transition:opacity .7s var(--ease),transform .7s var(--ease);white-space:nowrap}
+.award-item.in{opacity:1;transform:translateY(0)}
+.aw-icon{font-size:1.2rem;color:var(--gold)}
+.aw-text{display:flex;flex-direction:column;gap:.1rem}
+.aw-name{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.aw-detail{font-family:var(--ff-title);font-size:.95rem;color:var(--ivory2);font-style:italic}
+.aw-sep{width:1px;height:34px;background:var(--border);flex-shrink:0}
+
+/* ======================================
+   SECTIONS
+====================================== */
+section{padding:8rem 5vw}
+
+/* ABOUT */
+#about{background:var(--deep);position:relative;overflow:hidden}
+.about-watermark{position:absolute;right:-2rem;top:50%;transform:translateY(-50%);font-family:var(--ff-title);font-size:clamp(8rem,14vw,17rem);color:rgba(200,169,110,.03);white-space:nowrap;pointer-events:none;font-style:italic;line-height:1;user-select:none}
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}
+.about-visual{position:relative;isolation:isolate}
+.about-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;position:relative;z-index:1}
+.about-img-frame{position:absolute;top:-18px;left:-18px;right:18px;bottom:18px;border:1px solid var(--border);z-index:0;pointer-events:none}
+.about-img-accent{position:absolute;bottom:-24px;right:-24px;width:52%;aspect-ratio:1;object-fit:cover;border:4px solid var(--deep);z-index:2}
+.about-badge{
+  position:absolute;top:2rem;right:-1.5rem;z-index:3;
+  width:108px;height:108px;background:var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+}
+.ab-num{font-family:var(--ff-title);font-size:2.2rem;color:var(--ink);line-height:1}
+.ab-txt{font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-align:center}
+.about-body .eyebrow{margin-bottom:.8rem}
+.about-title{font-size:clamp(2.2rem,4vw,3.8rem);color:var(--ivory);margin-bottom:.5rem}
+.about-title em{color:var(--gold2)}
+.about-body p{margin-bottom:1.2rem}
+.about-quote{margin:2.5rem 0;padding:1.5rem 2rem;border-left:2px solid var(--gold);background:var(--gold-dim)}
+.about-quote p{font-family:var(--ff-title);font-size:1.15rem;font-style:italic;color:var(--ivory2);margin:0}
+.about-quote cite{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:.8rem;display:block;font-style:normal}
+.about-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+.m-val{font-family:var(--ff-title);font-size:3rem;color:var(--gold2);line-height:1}
+.m-lbl{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+
+/* DISHES */
+#dishes{background:var(--ink);position:relative}
+#dishes::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.dishes-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:5rem}
+.dishes-masonry{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+.dish-card{position:relative;overflow:hidden;cursor:none;background:var(--surface)}
+.dish-card:nth-child(1){grid-column:1/5;min-height:580px}
+.dish-card:nth-child(2){grid-column:5/9;min-height:285px}
+.dish-card:nth-child(3){grid-column:9/13;min-height:285px}
+.dish-card:nth-child(4){grid-column:5/8;min-height:285px}
+.dish-card:nth-child(5){grid-column:8/11;min-height:285px}
+.dish-card:nth-child(6){grid-column:11/13;min-height:285px}
+.dish-img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.dish-card:hover .dish-img{transform:scale(1.07)}
+.dish-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,5,10,.95) 0%,rgba(6,5,10,.35) 45%,transparent 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.8rem;transition:background .4s}
+.dish-card:hover .dish-overlay{background:linear-gradient(to top,rgba(6,5,10,.98) 0%,rgba(6,5,10,.62) 55%,rgba(6,5,10,.18) 100%)}
+.dish-cat{font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.dish-name{font-family:var(--ff-title);font-size:clamp(1.1rem,1.8vw,1.55rem);color:var(--ivory);margin-bottom:.5rem;line-height:1.2}
+.dish-desc{font-size:.78rem;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;opacity:0;transition:max-height .5s var(--ease),opacity .4s}
+.dish-card:hover .dish-desc{max-height:80px;opacity:1}
+.dish-price{font-family:var(--ff-title);font-size:1.1rem;color:var(--gold);margin-top:.8rem;display:flex;align-items:center;gap:.5rem}
+.dish-price::before{content:'';display:block;width:20px;height:1px;background:var(--gold);opacity:.5}
+
+/* EXPERIENCE BANNER */
+.exp-strip{position:relative;height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.exp-bg{position:absolute;inset:-20%;background:url('https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1600&q=80') center/cover no-repeat;will-change:transform}
+.exp-overlay{position:absolute;inset:0;background:rgba(6,5,10,.75)}
+.exp-content{position:relative;z-index:2;text-align:center;padding:0 5vw}
+.exp-content h2{font-size:clamp(2rem,5vw,4.5rem);color:var(--ivory);margin-bottom:1rem}
+.exp-content h2 em{color:var(--gold2)}
+.exp-content p{font-size:.88rem;color:var(--muted);max-width:500px;margin:0 auto 2.5rem}
+
+/* PRIVATE */
+#private{background:var(--surface);position:relative;overflow:hidden}
+#private::before{content:'PRIVATE';position:absolute;left:-1rem;bottom:-2rem;font-family:var(--ff-title);font-size:clamp(6rem,13vw,15rem);color:rgba(200,169,110,.03);white-space:nowrap;pointer-events:none;font-style:italic}
+.private-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:6vw;align-items:start}
+.private-gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.private-gallery-main{grid-column:1/-1;aspect-ratio:16/10;overflow:hidden}
+.private-gallery-main img,.private-gallery-sub img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);display:block}
+.private-gallery-main:hover img,.private-gallery-sub:hover img{transform:scale(1.05)}
+.private-gallery-sub{aspect-ratio:1;overflow:hidden}
+.private-features{list-style:none;margin:2.5rem 0}
+.private-features li{display:flex;align-items:flex-start;gap:1.2rem;padding:1rem 0;border-bottom:1px solid var(--border2);font-size:.85rem;color:var(--muted);transition:color .3s}
+.private-features li:hover{color:var(--ivory2)}
+.pf-icon{width:32px;height:32px;flex-shrink:0;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--gold);margin-top:-.1rem}
+.pf-strong{display:block;font-family:var(--ff-sub);font-size:.82rem;color:var(--ivory2);font-weight:400;margin-bottom:.2rem}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--ink);text-align:center;position:relative;overflow:hidden}
+#testimonials::before{content:'"';position:absolute;top:-3rem;left:50%;transform:translateX(-50%);font-family:var(--ff-title);font-size:28rem;color:rgba(200,169,110,.028);pointer-events:none;line-height:1}
+.testi-slider{position:relative;overflow:hidden}
+.testi-track{display:flex;transition:transform .7s var(--ease)}
+.testi-card{flex:0 0 100%;padding:0 12vw}
+.testi-stars{display:flex;justify-content:center;gap:5px;margin-bottom:2.5rem}
+.testi-star{color:var(--gold);font-size:.75rem}
+.testi-text{font-family:var(--ff-title);font-size:clamp(1.3rem,2.8vw,2rem);font-style:italic;color:var(--ivory);line-height:1.55;margin-bottom:2.5rem}
+.testi-author{font-family:var(--ff-sub);font-size:.78rem;letter-spacing:.15em;color:var(--gold);margin-bottom:.3rem}
+.testi-role{font-size:.72rem;color:var(--muted)}
+.testi-nav{display:flex;justify-content:center;align-items:center;gap:2rem;margin-top:3.5rem}
+.testi-arrow{background:none;border:1px solid var(--border);width:46px;height:46px;color:var(--gold);font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;padding:0}
+.testi-arrow:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.testi-dots{display:flex;gap:8px}
+.testi-dot{width:5px;height:5px;background:var(--border2);border:1px solid var(--border);border-radius:50%;cursor:none;transition:all .3s;padding:0}
+.testi-dot.active{background:var(--gold);border-color:var(--gold);width:28px;border-radius:3px}
+
+/* CTA BANNER */
+#cta-reserve{position:relative;padding:7rem 5vw;text-align:center;overflow:hidden;background:var(--surface)}
+.cta-rings{position:absolute;inset:0;pointer-events:none;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.cta-ring{position:absolute;border:1px solid var(--border);border-radius:50%}
+.cta-ring:nth-child(1){width:300px;height:150px}
+.cta-ring:nth-child(2){width:700px;height:320px;opacity:.5}
+.cta-ring:nth-child(3){width:1200px;height:520px;opacity:.25}
+.cta-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
+
+/* RESERVATION */
+#reservation{background:var(--deep)}
+.res-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:6vw;align-items:start}
+.res-hours-title{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:2.5rem 0 1.2rem}
+.hours-row{display:flex;justify-content:space-between;padding:.75rem 0;border-bottom:1px solid var(--border2);font-size:.83rem}
+.hours-row:first-of-type{border-top:1px solid var(--border2)}
+.hours-row span:first-child{color:var(--ivory2)}
+.hours-row span:last-child{color:var(--muted)}
+.res-ci-wrap{display:flex;flex-direction:column;gap:.9rem;margin-top:2rem}
+.res-ci{display:flex;align-items:center;gap:.9rem;font-size:.83rem;color:var(--muted);text-decoration:none;transition:color .3s}
+.res-ci:hover{color:var(--gold)}
+.res-ci-icon{width:34px;height:34px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--gold);flex-shrink:0}
+
+.res-form-wrap{background:var(--surface);border:1px solid var(--border);padding:3.5rem;position:relative}
+.res-form-wrap::before{content:'';position:absolute;top:-1px;left:3rem;width:80px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2),transparent)}
+.res-form-wrap::after{content:'';position:absolute;bottom:-1px;right:3rem;width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold2),var(--gold))}
+.form-head h3{font-size:2rem;color:var(--ivory);margin-bottom:.3rem}
+.form-head p{font-size:.8rem;color:var(--muted);margin-bottom:2.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.fg{display:flex;flex-direction:column;gap:.5rem}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.fg input,.fg select,.fg textarea{background:rgba(6,5,10,.7);border:1px solid var(--border2);color:var(--ivory);padding:.9rem 1.1rem;font-family:var(--ff-body);font-size:.85rem;font-weight:300;outline:none;width:100%;transition:border-color .3s,background .3s;-webkit-appearance:none;appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:rgba(6,5,10,.9)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--muted2)}
+.fg select option{background:var(--panel)}
+.fg textarea{resize:vertical;min-height:90px}
+.form-btn{margin-top:1.8rem;width:100%;justify-content:center;padding:1.15rem;font-size:.65rem}
+.form-success{display:none;text-align:center;padding:3rem 1rem}
+.form-success-icon{font-size:2.5rem;margin-bottom:1.5rem}
+.form-success h3{font-family:var(--ff-title);font-size:1.8rem;font-style:italic;color:var(--ivory);margin-bottom:.8rem}
+.form-success p{font-size:.83rem;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid var(--border)}
+.footer-top{padding:5.5rem 5vw 4rem;display:grid;grid-template-columns:2.5fr 1fr 1fr 1.4fr;gap:4rem}
+.footer-logo-name{font-family:var(--ff-title);font-size:2rem;color:var(--ivory);text-decoration:none;display:block;margin-bottom:.3rem}
+.footer-logo-name span{color:var(--gold)}
+.footer-logo-sub{display:flex;align-items:center;gap:.6rem;margin-bottom:1.8rem}
+.footer-logo-rule{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);max-width:30px}
+.footer-logo-tagline{font-size:.46rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);opacity:.8}
+.footer-desc{font-size:.83rem;color:var(--muted);line-height:1.95;max-width:290px;margin-bottom:2rem}
+.footer-socials{display:flex;gap:.7rem}
+.fsoc{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:.68rem;font-family:var(--ff-body);transition:all .3s}
+.fsoc:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.fc-title{font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:.85rem}
+.footer-links a{font-size:.82rem;color:var(--muted);text-decoration:none;transition:color .3s;display:inline-flex;align-items:center;gap:.5rem}
+.footer-links a::before{content:'';display:block;width:0;height:1px;background:var(--gold);transition:width .3s}
+.footer-links a:hover{color:var(--gold2)}
+.footer-links a:hover::before{width:12px}
+.nl-label{font-size:.8rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem}
+.nl-row{display:flex}
+.nl-row input{flex:1;background:var(--surface);border:1px solid var(--border);border-right:none;padding:.75rem 1rem;color:var(--ivory);font-family:var(--ff-body);font-size:.8rem;outline:none;transition:border-color .3s}
+.nl-row input:focus{border-color:var(--gold)}
+.nl-row input::placeholder{color:var(--muted2)}
+.nl-row button{background:var(--gold);border:none;padding:.75rem 1.2rem;color:var(--ink);font-size:.85rem;cursor:none;transition:background .3s;flex-shrink:0}
+.nl-row button:hover{background:var(--gold2)}
+.footer-bottom{padding:1.5rem 5vw;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:.68rem;color:var(--muted2);letter-spacing:.05em}
+.fb-links{display:flex;gap:2rem}
+.fb-links a{font-size:.65rem;color:var(--muted2);text-decoration:none;transition:color .3s}
+.fb-links a:hover{color:var(--gold)}
+
+/* MAP */
+.map-wrap{margin-top:2rem;border:1px solid var(--border)}
+.map-wrap iframe{width:100%;height:270px;border:none;display:block;filter:grayscale(1) brightness(.65) contrast(1.15)}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sr-up{transform:translateY(40px)}
+.sr-left{transform:translateX(-40px)}
+.sr-right{transform:translateX(40px)}
+.sr-scale{transform:scale(.94)}
+.sr.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.35s}.d4{transition-delay:.48s}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .dishes-masonry{grid-template-columns:repeat(6,1fr)}
+  .dish-card:nth-child(1){grid-column:1/4;min-height:360px}
+  .dish-card:nth-child(2){grid-column:4/7;min-height:360px}
+  .dish-card:nth-child(3){grid-column:1/3;min-height:280px}
+  .dish-card:nth-child(4){grid-column:3/5;min-height:280px}
+  .dish-card:nth-child(5){grid-column:5/7;min-height:280px}
+  .dish-card:nth-child(6){display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:3rem}
+}
+@media(max-width:900px){
+  .header-nav,.hdr-tel{display:none}
+  .hdr-ham{display:flex}
+  .about-layout,.private-layout,.res-layout{grid-template-columns:1fr;gap:3.5rem}
+  .about-badge,.about-img-accent{display:none}
+  .awards-strip{gap:2rem;flex-wrap:wrap}
+  .aw-sep{display:none}
+}
+@media(max-width:640px){
+  section{padding:5rem 5vw}
+  .dishes-masonry{display:flex;flex-direction:column}
+  .dish-card{min-height:270px!important}
+  .dish-card:nth-child(6){display:flex}
+  .dish-desc{max-height:60px!important;opacity:1!important}
+  .dishes-hdr{flex-direction:column;gap:1.5rem;align-items:flex-start}
+  .form-grid{grid-template-columns:1fr}
+  .res-form-wrap{padding:2rem 1.5rem}
+  .footer-top{grid-template-columns:1fr;gap:2.5rem}
+  .footer-bottom{flex-direction:column;gap:.8rem;text-align:center}
+  .fb-links{gap:1.2rem}
+  .testi-card{padding:0 4vw}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{justify-content:center}
+  #cursor,#cursor-ring{display:none}
+  .about-metrics{grid-template-columns:1fr;gap:1.2rem}
+  .awards-strip{flex-direction:column;gap:1.5rem;padding:2rem 5vw}
+}
+</style>
+</head>
+<body>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">E · R</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Preparing Your Experience</div>
+</div>
+
+<!-- ══ HEADER ══ -->
+<header id="site-header" role="banner">
+  <div class="header-topline" aria-hidden="true"></div>
+
+  <a href="#hero" class="header-logo" aria-label="Executive Restaurant — Home">
+    <span class="logo-word">Executive<span class="dot">·</span>Restaurant</span>
+    <div class="logo-sub-row">
+      <div class="logo-rule" aria-hidden="true"></div>
+      <span class="logo-tagline">Fine Dining · Est. 2008</span>
+      <div class="logo-rule" style="background:linear-gradient(90deg,transparent,var(--gold))" aria-hidden="true"></div>
+    </div>
+  </a>
+
+  <nav class="header-nav" aria-label="Main navigation">
+    <a href="#about">Our Story</a>
+    <span class="nav-gem" aria-hidden="true"></span>
+    <a href="#dishes">The Menu</a>
+    <span class="nav-gem" aria-hidden="true"></span>
+    <a href="#private">Private Dining</a>
+    <span class="nav-gem" aria-hidden="true"></span>
+    <a href="#testimonials">Reviews</a>
+    <span class="nav-gem" aria-hidden="true"></span>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-right">
+    <a href="tel:+15553932346" class="hdr-tel" aria-label="Call Executive Restaurant">+1 (555) 393-2346</a>
+    <a href="#reservation" class="hdr-reserve" aria-label="Reserve a table">
+      <span class="hdr-reserve-gem" aria-hidden="true"></span>
+      <span>Reserve a Table</span>
+    </a>
+  </div>
+
+  <button class="hdr-ham" id="ham" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobMenu">
+    <i></i><i></i><i></i>
+  </button>
+</header>
+
+<div class="mob-overlay" id="mobMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="#about" class="mob-link">Our Story</a>
+  <a href="#dishes" class="mob-link">The Menu</a>
+  <a href="#private" class="mob-link">Private Dining</a>
+  <a href="#testimonials" class="mob-link">Reviews</a>
+  <a href="#reservation" class="mob-link">Reserve a Table</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero" aria-label="Welcome to Executive Restaurant">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide slide-1 active"></div>
+    <div class="hero-slide slide-2"></div>
+    <div class="hero-slide slide-3"></div>
+  </div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="hero-shimmer" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-ey-line" aria-hidden="true"></div>
+      <span class="eyebrow">Fine Dining · New York · Est. 2008</span>
+    </div>
+    <h1 class="hero-title" aria-label="Where Executive Taste Meets Timeless Elegance">
+      <span class="ht1">Where Executive</span>
+      <span class="ht2">Taste Meets</span>
+      <span class="ht3">Timeless Elegance</span>
+    </h1>
+    <div class="hero-divider" aria-hidden="true">
+      <div class="hd-line"></div>
+      <span class="hd-text">A culinary destination for the discerning</span>
+      <div class="hd-line" style="background:linear-gradient(90deg,transparent,var(--gold))"></div>
+    </div>
+    <p class="hero-sub">An exclusive sanctuary where artistry meets gastronomy — crafted for those who demand perfection in every moment.</p>
+    <div class="hero-actions">
+      <a href="#dishes" class="btn btn-gold"><span class="btn-inner"><span>Explore the Menu</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a>
+      <a href="#reservation" class="btn btn-ghost"><span class="btn-inner"><span>Reserve a Table</span></span><span class="btn-bg"></span></a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-txt">Scroll</span>
+    <div class="hero-scroll-ln"></div>
+  </div>
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Hero slideshow navigation">
+    <button class="hero-dot active" aria-label="Slide 1" role="tab" aria-selected="true"></button>
+    <button class="hero-dot" aria-label="Slide 2" role="tab" aria-selected="false"></button>
+    <button class="hero-dot" aria-label="Slide 3" role="tab" aria-selected="false"></button>
+  </div>
+</section>
+
+<!-- ══ AWARDS ══ -->
+<div class="awards-strip" role="list" aria-label="Awards and accolades">
+  <div class="award-item" role="listitem"><span class="aw-icon" aria-hidden="true">✦</span><div class="aw-text"><span class="aw-name">Michelin Recognition</span><span class="aw-detail">Recommended 2023–24</span></div></div>
+  <div class="aw-sep" aria-hidden="true"></div>
+  <div class="award-item" role="listitem"><span class="aw-icon" aria-hidden="true">◈</span><div class="aw-text"><span class="aw-name">Wine Spectator</span><span class="aw-detail">Award of Excellence</span></div></div>
+  <div class="aw-sep" aria-hidden="true"></div>
+  <div class="award-item" role="listitem"><span class="aw-icon" aria-hidden="true">✦</span><div class="aw-text"><span class="aw-name">Forbes Travel</span><span class="aw-detail">Four-Star Dining</span></div></div>
+  <div class="aw-sep" aria-hidden="true"></div>
+  <div class="award-item" role="listitem"><span class="aw-icon" aria-hidden="true">◈</span><div class="aw-text"><span class="aw-name">James Beard</span><span class="aw-detail">Semifinalist 2024</span></div></div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="about-watermark" aria-hidden="true">Excellence</div>
+  <div class="about-layout">
+    <div class="about-visual sr sr-left">
+      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=700&q=85" alt="Executive Restaurant — elegant dining room interior" class="about-img-main" loading="lazy">
+      <div class="about-img-frame" aria-hidden="true"></div>
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Signature dish presentation" class="about-img-accent" loading="lazy">
+      <div class="about-badge" aria-label="15 years of culinary excellence">
+        <span class="ab-num">15</span>
+        <span class="ab-txt">Years of<br>Excellence</span>
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow sr sr-up">Our Philosophy</p>
+      <div class="ornament sr sr-up d1" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <h2 id="about-h" class="about-title sr sr-up d1">A Table Reserved for <em>the Discerning</em></h2>
+      <p class="body-text sr sr-up d2" style="margin-top:1.5rem">Executive Restaurant was born from a singular vision: to create a dining experience worthy of life's most important moments. Since 2008, we have served New York's most discerning guests in a space designed for power, privacy, and presence.</p>
+      <div class="about-quote sr sr-up d2">
+        <p>"Every dish is an act of devotion — to the ingredient, to the guest, to the art of hospitality."</p>
+        <cite>— Chef Marcus Holloway, Executive Chef</cite>
+      </div>
+      <p class="body-text sr sr-up d3">Our culinary team draws from classical French technique and modern global influences to craft dishes that are as visually stunning as they are sensorially profound. Every element is intentional, every service moment choreographed.</p>
+      <div class="about-metrics">
+        <div class="sr sr-up d1"><div class="m-val">14k+</div><div class="m-lbl">Guests Served</div></div>
+        <div class="sr sr-up d2"><div class="m-val">3</div><div class="m-lbl">Dining Rooms</div></div>
+        <div class="sr sr-up d3"><div class="m-val">98%</div><div class="m-lbl">Return Rate</div></div>
+      </div>
+      <div style="margin-top:2.5rem" class="sr sr-up d3">
+        <a href="#dishes" class="btn btn-ghost"><span class="btn-inner"><span>View Our Menu</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISHES ══ -->
+<section id="dishes" aria-labelledby="dishes-h">
+  <div class="dishes-hdr">
+    <div>
+      <p class="eyebrow sr sr-up">Signature Creations</p>
+      <div class="ornament sr sr-up d1" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <h2 id="dishes-h" class="big-title sr sr-up d1">Crafted with <em>Uncompromising</em> Precision</h2>
+    </div>
+    <a href="#reservation" class="btn btn-ghost sr sr-right"><span class="btn-inner"><span>Reserve Now</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a>
+  </div>
+  <div class="dishes-masonry" role="list" aria-label="Signature dishes">
+    <div class="dish-card sr sr-up" role="listitem"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=85" alt="Wagyu Beef Tenderloin" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Signature Entrée</div><div class="dish-name">Wagyu Beef Tenderloin</div><div class="dish-desc">A5 Japanese wagyu, black truffle jus, foraged mushrooms, potato fondant.</div><div class="dish-price">$145</div></div></div>
+    <div class="dish-card sr sr-up d1" role="listitem"><img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600&q=85" alt="Pan-Seared Diver Scallops" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Seafood</div><div class="dish-name">Diver Scallops</div><div class="dish-desc">Champagne beurre blanc, Imperial caviar, crispy capers, saffron emulsion.</div><div class="dish-price">$82</div></div></div>
+    <div class="dish-card sr sr-up d2" role="listitem"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=85" alt="Black Truffle Risotto" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Vegetarian</div><div class="dish-name">Black Truffle Risotto</div><div class="dish-desc">Carnaroli rice, aged Parmigiano-Reggiano, winter black truffle.</div><div class="dish-price">$68</div></div></div>
+    <div class="dish-card sr sr-up d1" role="listitem"><img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=600&q=85" alt="Butter Poached Lobster" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Seafood</div><div class="dish-name">Butter Poached Lobster</div><div class="dish-desc">Maine lobster tail, saffron bisque, lobster roe gnocchi.</div><div class="dish-price">$110</div></div></div>
+    <div class="dish-card sr sr-up d2" role="listitem"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=85" alt="Dark Chocolate Sphere" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Dessert</div><div class="dish-name">Dark Chocolate Sphere</div><div class="dish-desc">Valrhona 72%, praline cream, hazelnut crumble, edible 24k gold leaf.</div><div class="dish-price">$32</div></div></div>
+    <div class="dish-card sr sr-up d3" role="listitem"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=85" alt="Seven-Course Tasting Menu" class="dish-img" loading="lazy"><div class="dish-overlay"><div class="dish-cat">Chef's Tasting</div><div class="dish-name">Seven-Course Journey</div><div class="dish-desc">Chef Holloway's complete vision — with optional wine pairing.</div><div class="dish-price">$295</div></div></div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE STRIP ══ -->
+<div class="exp-strip" aria-hidden="true">
+  <div class="exp-bg" id="expBg"></div>
+  <div class="exp-overlay"></div>
+  <div class="exp-content sr sr-up">
+    <p class="eyebrow" style="margin-bottom:1rem">The Experience</p>
+    <div class="ornament" style="justify-content:center"><div class="ornament-diamond"></div></div>
+    <h2>More Than a Meal — <em>A Memory</em></h2>
+    <p class="body-text" style="margin:1.5rem auto 2.5rem">From the first greeting to the final toast, every detail is orchestrated with obsessive care.</p>
+    <a href="#private" class="btn btn-gold"><span class="btn-inner"><span>Discover Private Dining</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a>
+  </div>
+</div>
+
+<!-- ══ PRIVATE DINING ══ -->
+<section id="private" aria-labelledby="private-h">
+  <div class="private-layout">
+    <div class="private-gallery sr sr-left">
+      <div class="private-gallery-main"><img src="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=900&q=85" alt="Private dining room" loading="lazy"></div>
+      <div class="private-gallery-sub"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80" alt="Private event table setting" loading="lazy"></div>
+      <div class="private-gallery-sub"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&q=80" alt="Premium wine service" loading="lazy"></div>
+    </div>
+    <div class="private-body">
+      <p class="eyebrow sr sr-up">Exclusive Spaces</p>
+      <div class="ornament sr sr-up d1" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <h2 id="private-h" class="big-title sr sr-up d1">Private Dining <em>Redefined</em></h2>
+      <p class="body-text sr sr-up d2" style="margin-top:1.5rem">Host your most important meetings, celebrations, and corporate events in one of our three private dining rooms — each a secluded sanctuary designed to impress.</p>
+      <ul class="private-features sr sr-up d2" aria-label="Private dining features">
+        <li><div class="pf-icon" aria-hidden="true">⊞</div><div><span class="pf-strong">Dedicated Entrance & Butler</span>Arrive with complete privacy and absolute discretion.</div></li>
+        <li><div class="pf-icon" aria-hidden="true">✦</div><div><span class="pf-strong">Custom Chef-Curated Menus</span>Personal consultations with Chef Holloway.</div></li>
+        <li><div class="pf-icon" aria-hidden="true">◈</div><div><span class="pf-strong">Sommelier Wine Pairings</span>Cellar access to 1,400+ labels worldwide.</div></li>
+        <li><div class="pf-icon" aria-hidden="true">▣</div><div><span class="pf-strong">AV & Corporate Capabilities</span>Seamless technology for critical presentations.</div></li>
+        <li><div class="pf-icon" aria-hidden="true">◉</div><div><span class="pf-strong">10 to 80 Guests</span>Three distinct rooms for any scale of event.</div></li>
+      </ul>
+      <div class="sr sr-up d3">
+        <a href="#reservation" class="btn btn-gold"><span class="btn-inner"><span>Book a Private Event</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials" aria-labelledby="testi-h">
+  <p class="eyebrow sr sr-up" style="margin-bottom:.8rem">Guest Stories</p>
+  <div class="ornament sr sr-up d1" style="justify-content:center" aria-hidden="true"><div class="ornament-diamond"></div></div>
+  <h2 id="testi-h" class="big-title sr sr-up d1">What Our Guests <em>Say</em></h2>
+  <div style="height:4rem"></div>
+  <div class="testi-slider" role="region" aria-label="Guest testimonials" aria-live="polite">
+    <div class="testi-track" id="testiTrack">
+      <article class="testi-card"><div class="testi-stars" aria-label="5 stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div><p class="testi-text">An extraordinary evening that set a new benchmark. The wagyu course alone justified every cent. Executive Restaurant truly understands what luxury hospitality means in 2024.</p><div class="testi-author">Jonathan M.</div><div class="testi-role">Managing Partner, Sterling Capital Group</div></article>
+      <article class="testi-card"><div class="testi-stars" aria-label="5 stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div><p class="testi-text">We hosted our entire board dinner here and the room was unanimous: this was the finest corporate dining experience any of us had encountered. Flawless in every detail.</p><div class="testi-author">Sarah L.</div><div class="testi-role">Chief Executive Officer, Nexus Global Group</div></article>
+      <article class="testi-card"><div class="testi-stars" aria-label="5 stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div><p class="testi-text">Our anniversary dinner was the most beautiful evening of our marriage. The private room, the personal attention, the sommelier's guidance — this is what fine dining should feel like.</p><div class="testi-author">Michael & Elena R.</div><div class="testi-role">Private Dining Guests</div></article>
+      <article class="testi-card"><div class="testi-stars" aria-label="5 stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div><p class="testi-text">The seven-course tasting menu is unlike anything else in New York. Each dish tells a precise, emotional story. This is where serious business and serious pleasure converge.</p><div class="testi-author">David C.</div><div class="testi-role">Senior Partner, Meridian Law Associates</div></article>
+      <article class="testi-card"><div class="testi-stars" aria-label="5 stars"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div><p class="testi-text">Effortlessly sophisticated. From the first step through the door, you know every detail has been designed for those who settle for nothing less than the extraordinary.</p><div class="testi-author">Victoria N.</div><div class="testi-role">Creative Director, Vogue US</div></article>
+    </div>
+  </div>
+  <div class="testi-nav">
+    <button class="testi-arrow" id="tPrev" aria-label="Previous testimonial">‹</button>
+    <div class="testi-dots" id="tDots" role="tablist"></div>
+    <button class="testi-arrow" id="tNext" aria-label="Next testimonial">›</button>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section id="cta-reserve" aria-labelledby="cta-h">
+  <div class="cta-rings" aria-hidden="true">
+    <div class="cta-ring"></div><div class="cta-ring"></div><div class="cta-ring"></div>
+  </div>
+  <div class="cta-inner">
+    <p class="eyebrow sr sr-up" style="margin-bottom:.8rem">Don't Delay</p>
+    <div class="ornament sr sr-up d1" style="justify-content:center" aria-hidden="true"><div class="ornament-diamond"></div></div>
+    <h2 id="cta-h" class="big-title sr sr-up d1">Reserve Your Table <em>Today</em></h2>
+    <p class="body-text sr sr-up d2" style="margin:1.5rem auto 3rem;max-width:520px;text-align:center">Our most coveted time slots fill weeks in advance. Secure your next executive dining experience before the table is gone.</p>
+    <div class="sr sr-up d3"><a href="#reservation" class="btn btn-gold" style="padding:1.15rem 3rem"><span class="btn-inner"><span>Make a Reservation</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></a></div>
+  </div>
+</section>
+
+<!-- ══ RESERVATION ══ -->
+<section id="reservation" aria-labelledby="res-h">
+  <div class="res-layout">
+    <div class="res-info">
+      <p class="eyebrow sr sr-up">Reservations</p>
+      <div class="ornament sr sr-up d1" aria-hidden="true"><div class="ornament-diamond"></div></div>
+      <h2 id="res-h" class="big-title sr sr-up d1" style="font-size:clamp(2rem,4vw,3.5rem)">Secure Your <em>Evening</em></h2>
+      <p class="body-text sr sr-up d2" style="margin-top:1.5rem">For same-day or large party reservations, please contact us directly. Private event enquiries are handled by our dedicated events team.</p>
+      <div class="sr sr-up d2">
+        <p class="res-hours-title">Opening Hours</p>
+        <div class="hours-row"><span>Monday – Friday</span><span>11:30 AM – 11:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>5:00 PM – 12:00 AM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>5:00 PM – 10:00 PM</span></div>
+        <div class="hours-row"><span>Private Events</span><span>By Arrangement</span></div>
+      </div>
+      <div class="res-ci-wrap sr sr-up d3">
+        <a href="tel:+15553932346" class="res-ci"><div class="res-ci-icon" aria-hidden="true">☎</div>+1 (555) 393-2346</a>
+        <a href="mailto:reservations@executiverestaurant.com" class="res-ci"><div class="res-ci-icon" aria-hidden="true">✉</div>reservations@executiverestaurant.com</a>
+        <a href="mailto:events@executiverestaurant.com" class="res-ci"><div class="res-ci-icon" aria-hidden="true">◈</div>events@executiverestaurant.com</a>
+      </div>
+    </div>
+    <div class="res-form-wrap sr sr-right">
+      <div class="form-head">
+        <h3>Reserve a Table</h3>
+        <p>Complete the form and we will confirm your reservation within 2 hours.</p>
+      </div>
+      <div class="form-success" id="fSuccess" role="status" aria-live="polite">
+        <div class="form-success-icon" aria-hidden="true">✦</div>
+        <h3>Reservation Received</h3>
+        <p>We will confirm your table within 2 hours. We look forward to welcoming you.</p>
+      </div>
+      <form id="resForm" novalidate aria-label="Table reservation form">
+        <div class="form-grid">
+          <div class="fg"><label for="rn">Full Name *</label><input type="text" id="rn" name="name" placeholder="Your name" required aria-required="true"></div>
+          <div class="fg"><label for="re">Email Address *</label><input type="email" id="re" name="email" placeholder="your@email.com" required aria-required="true"></div>
+          <div class="fg"><label for="rp">Phone Number</label><input type="tel" id="rp" name="phone" placeholder="+1 (555) 000-0000"></div>
+          <div class="fg"><label for="rg">Number of Guests *</label><select id="rg" name="guests" required aria-required="true"><option value="">Select guests</option><option>1 – 2 Guests</option><option>3 – 4 Guests</option><option>5 – 6 Guests</option><option>7 – 10 Guests</option><option>Private Event (10+)</option></select></div>
+          <div class="fg"><label for="rd">Preferred Date *</label><input type="date" id="rd" name="date" required aria-required="true"></div>
+          <div class="fg"><label for="rt">Preferred Time *</label><select id="rt" name="time" required aria-required="true"><option value="">Select time</option><option>11:30 AM</option><option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option></select></div>
+          <div class="fg"><label for="ro">Occasion</label><select id="ro" name="occasion"><option value="">Select occasion</option><option>Business Dinner</option><option>Corporate Event</option><option>Anniversary</option><option>Birthday</option><option>Proposal</option><option>Family Celebration</option><option>Other</option></select></div>
+          <div class="fg"><label for="rs">Seating Preference</label><select id="rs" name="seating"><option value="">Select preference</option><option>Main Dining Room</option><option>Private Room</option><option>Chef's Table</option><option>Bar Seating</option></select></div>
+          <div class="fg full"><label for="rnotes">Special Requests</label><textarea id="rnotes" name="notes" placeholder="Dietary restrictions, allergies, accessibility needs, special arrangements…"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-gold form-btn"><span class="btn-inner"><span>Confirm Reservation</span><span class="btn-arrow">→</span></span><span class="btn-bg"></span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" style="background:var(--surface);padding:5rem 5vw" aria-labelledby="contact-h">
+  <div style="text-align:center;margin-bottom:4rem">
+    <p class="eyebrow sr sr-up" style="margin-bottom:.8rem">Find Us</p>
+    <div class="ornament sr sr-up d1" style="justify-content:center" aria-hidden="true"><div class="ornament-diamond"></div></div>
+    <h2 id="contact-h" class="big-title sr sr-up d1" style="font-size:clamp(2rem,4vw,3.5rem)">Visit <em>Executive Restaurant</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-bottom:4rem" role="list">
+    <div class="sr sr-up" role="listitem">
+      <div style="width:42px;height:42px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.2rem" aria-hidden="true">⊞</div>
+      <h4 style="font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-family:var(--ff-body)">Address</h4>
+      <p style="font-size:.88rem;color:var(--muted);line-height:2">1 Executive Plaza<br>Midtown Manhattan<br>New York, NY 10001</p>
+    </div>
+    <div class="sr sr-up d1" role="listitem">
+      <div style="width:42px;height:42px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.2rem" aria-hidden="true">☎</div>
+      <h4 style="font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-family:var(--ff-body)">Contact</h4>
+      <a href="tel:+15553932346" style="font-size:.88rem;color:var(--muted);text-decoration:none;display:block;line-height:2;transition:color .3s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">+1 (555) 393-2346</a>
+      <a href="mailto:reservations@executiverestaurant.com" style="font-size:.88rem;color:var(--muted);text-decoration:none;display:block;line-height:2;transition:color .3s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">reservations@executiverestaurant.com</a>
+    </div>
+    <div class="sr sr-up d2" role="listitem">
+      <div style="width:42px;height:42px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.2rem" aria-hidden="true">◷</div>
+      <h4 style="font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-family:var(--ff-body)">Hours</h4>
+      <p style="font-size:.88rem;color:var(--muted);line-height:2">Mon–Fri: 11:30 AM – 11:00 PM<br>Saturday: 5:00 PM – 12:00 AM<br>Sunday: 5:00 PM – 10:00 PM</p>
+    </div>
+  </div>
+  <div class="map-wrap sr sr-up d1">
+    <iframe title="Executive Restaurant on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.9857!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xa8e2b4f3e1f37b71!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map showing Executive Restaurant location"></iframe>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="sr sr-up">
+      <a href="#hero" class="footer-logo-name">Executive<span>·</span>Restaurant</a>
+      <div class="footer-logo-sub">
+        <div class="footer-logo-rule" aria-hidden="true"></div>
+        <span class="footer-logo-tagline">Fine Dining · Est. 2008</span>
+        <div class="footer-logo-rule" style="background:linear-gradient(90deg,transparent,var(--gold))" aria-hidden="true"></div>
+      </div>
+      <p class="footer-desc">A fine-dining experience designed for those who understand that true luxury is not merely what you eat — it is how you are made to feel from the moment you arrive.</p>
+      <div class="footer-socials" aria-label="Follow us">
+        <a href="#" class="fsoc" aria-label="Instagram">ig</a>
+        <a href="#" class="fsoc" aria-label="Facebook">fb</a>
+        <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
+        <a href="#" class="fsoc" aria-label="X">𝕏</a>
+      </div>
+    </div>
+    <nav class="sr sr-up d1" aria-label="Footer navigation">
+      <p class="fc-title">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#dishes">The Menu</a></li>
+        <li><a href="#private">Private Dining</a></li>
+        <li><a href="#testimonials">Guest Reviews</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="sr sr-up d2" aria-label="Dining">
+      <p class="fc-title">Dining</p>
+      <ul class="footer-links">
+        <li><a href="#">Lunch Menu</a></li>
+        <li><a href="#">Dinner Menu</a></li>
+        <li><a href="#">Wine List</a></li>
+        <li><a href="#">Chef's Tasting</a></li>
+        <li><a href="#">Seasonal Specials</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </nav>
+    <div class="sr sr-up d3">
+      <p class="fc-title">Newsletter</p>
+      <p class="nl-label">Exclusive menus, private events, and culinary stories — delivered to your inbox.</p>
+      <div class="nl-row">
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button type="button" aria-label="Subscribe to newsletter">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Executive Restaurant LLC. All rights reserved.</p>
+    <div class="fb-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* LOADER */
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('done'),2200)});
+
+/* CUSTOM CURSOR */
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function animR(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animR)})();
+document.querySelectorAll('a,button,.dish-card,.private-gallery-main,.private-gallery-sub').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='14px';cur.style.height='14px';cur.style.background='var(--gold2)';ring.style.width='52px';ring.style.height='52px';ring.style.borderColor='rgba(200,169,110,0.7)'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='8px';cur.style.height='8px';cur.style.background='var(--gold)';ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='rgba(200,169,110,0.5)'});
+});
+
+/* HEADER */
+const hdr=document.getElementById('site-header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* HAMBURGER */
+const hamBtn=document.getElementById('ham'),mobMenu=document.getElementById('mobMenu');
+hamBtn.addEventListener('click',()=>{
+  const open=mobMenu.classList.toggle('open');
+  hamBtn.classList.toggle('open',open);
+  hamBtn.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+mobMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mobMenu.classList.remove('open');hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}));
+
+/* HERO SLIDER */
+const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
+let hIdx=0,hT;
+function goHero(n){
+  slides[hIdx].classList.remove('active');dots[hIdx].classList.remove('active');dots[hIdx].setAttribute('aria-selected','false');
+  hIdx=(n+slides.length)%slides.length;
+  slides[hIdx].classList.add('active');dots[hIdx].classList.add('active');dots[hIdx].setAttribute('aria-selected','true');
+}
+dots.forEach((d,i)=>d.addEventListener('click',()=>{clearInterval(hT);goHero(i);hT=setInterval(()=>goHero(hIdx+1),7000)}));
+hT=setInterval(()=>goHero(hIdx+1),7000);
+
+/* SCROLL REVEAL */
+const srEls=document.querySelectorAll('.sr');
+new IntersectionObserver(ents=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.removeAttribute('data-sr')}})},{threshold:.08,rootMargin:'0px 0px -35px 0px'}).observe
+const srObs=new IntersectionObserver(ents=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}})},{threshold:.08,rootMargin:'0px 0px -35px 0px'});
+srEls.forEach(el=>srObs.observe(el));
+
+/* AWARDS */
+new IntersectionObserver(ents=>{ents.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.award-item').forEach((a,i)=>setTimeout(()=>a.classList.add('in'),i*120));e.target.__ao=true}})},{threshold:.3}).observe(document.querySelector('.awards-strip'));
+
+/* PARALLAX */
+const expBg=document.getElementById('expBg');
+window.addEventListener('scroll',()=>{
+  if(!expBg)return;
+  const r=expBg.parentElement.getBoundingClientRect();
+  expBg.style.transform=`translateY(${(r.top/(innerHeight+r.height))*80}px)`;
+},{passive:true});
+
+/* TESTIMONIALS */
+const tTrack=document.getElementById('testiTrack'),tDots=document.getElementById('tDots');
+const tCards=tTrack.querySelectorAll('.testi-card');
+let tIdx=0,tT;
+tCards.forEach((_,i)=>{
+  const d=document.createElement('button');
+  d.className='testi-dot'+(i===0?' active':'');
+  d.setAttribute('aria-label',`Testimonial ${i+1}`);
+  d.setAttribute('role','tab');
+  d.setAttribute('aria-selected',i===0?'true':'false');
+  d.addEventListener('click',()=>{clearInterval(tT);goTesti(i);tT=setInterval(()=>goTesti(tIdx+1),5500)});
+  tDots.appendChild(d);
+});
+function goTesti(n){
+  tIdx=(n+tCards.length)%tCards.length;
+  tTrack.style.transform=`translateX(-${tIdx*100}%)`;
+  tDots.querySelectorAll('.testi-dot').forEach((d,i)=>{d.classList.toggle('active',i===tIdx);d.setAttribute('aria-selected',i===tIdx?'true':'false')});
+}
+document.getElementById('tPrev').addEventListener('click',()=>{clearInterval(tT);goTesti(tIdx-1);tT=setInterval(()=>goTesti(tIdx+1),5500)});
+document.getElementById('tNext').addEventListener('click',()=>{clearInterval(tT);goTesti(tIdx+1);tT=setInterval(()=>goTesti(tIdx+1),5500)});
+tT=setInterval(()=>goTesti(tIdx+1),5500);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){clearInterval(tT);goTesti(tIdx-1);tT=setInterval(()=>goTesti(tIdx+1),5500)}if(e.key==='ArrowRight'){clearInterval(tT);goTesti(tIdx+1);tT=setInterval(()=>goTesti(tIdx+1),5500)}});
+
+/* DATE MIN */
+document.getElementById('rd').min=new Date().toISOString().split('T')[0];
+
+/* FORM */
+document.getElementById('resForm').addEventListener('submit',function(e){
+  e.preventDefault();let ok=true;
+  this.querySelectorAll('[required]').forEach(f=>{f.style.borderColor='';if(!f.value.trim()){f.style.borderColor='#c0392b';ok=false}});
+  const em=document.getElementById('re');
+  if(em.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)){em.style.borderColor='#c0392b';ok=false}
+  if(ok){this.style.display='none';document.getElementById('fSuccess').style.display='block'}
+  else{const bad=this.querySelector('[style*="c0392b"]');if(bad)bad.focus()}
+});
+
+/* NEWSLETTER */
+document.querySelector('.nl-row button').addEventListener('click',function(){
+  const inp=this.previousElementSibling;
+  if(inp.value){inp.value='';inp.placeholder='Thank you! ✦';inp.disabled=true;this.textContent='✓'}
+});
+</script>
+</body>
+</html>
